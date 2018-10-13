@@ -175,13 +175,13 @@
       </div>
 	  
 	  <div style="text-align: center;">
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="10" cols="100"> </textarea>
+      <textarea class="form-control" id="postBox" name="comments" placeholder="Comment" rows="10" cols="100"> </textarea>
 	  </div>
 	  
       <br>
       <div style="text-align:center;">
         <div class="col-md-12 form-group">
-          <button onclick="addPost()">Send</button>
+          <button onclick="addPost()">Post</button>
         </div>
       </div>
     
@@ -191,7 +191,7 @@
   <script>
 		function addPost() {
 		   var newPost = document.createElement("TEXTAREA");
-		   var text = document.createTextNode("Created new text area");
+		   var text = document.createTextNode(document.getElementById("postBox").value);
 		   newPost.appendChild(text);
 		   document.body.appendChild(newPost);
 		}
