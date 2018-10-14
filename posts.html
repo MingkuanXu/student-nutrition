@@ -26,9 +26,10 @@
   textarea {
 	  font-family: Trebuchet MS, cursive, sans-serif;
 	  font-size: 80%;
-	  background-color: #E59866;
+	  background-color: #F6DDCC;
 	  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-	  color: #1B4F72;
+	  color: #17202A;
+	  readonly;
   }
   
   input {
@@ -84,6 +85,7 @@
 		   postByText.appendChild(paragraphText);
 		   postByText.position = "relative";
 		   postByText.align = "center";
+		   newPost.disabled = true;
 		   document.body.appendChild(postByText);
 		}
   </script>
