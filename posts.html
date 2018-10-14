@@ -13,36 +13,22 @@
 	
 	<style>
   body {
-      font: 400 15px/1.8 Lato, sans-serif;
-      color: #777;
+      font: 400 20px/1.8 Garamond, sans-serif;
+      color: #AEB6BF;
+	  background-color: #186A3B;
   }
-
-  .bg-1 {
-      background: #2d2d30;
-      color: #bdbd00;
-  }
-
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail p {
-      margin-top: 15px;
-      color: #555;
-  }
-  textarea {
-      resize: none;
-	  margin-left:auto;
-	  margin-right:auto;
+  
+  button {
+	  background-color: #008CBA;
+	  padding: 14px 40px;
+	  border-radius: 20%;
+	  font-size: 95%;
   }
   </style>
 	
   </head>
   <body>
     <h1 style="text-align: center;">Posts</h1>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-    <!--<script src="js/bootstrap.min.js"></script>-->
 	
 	<!-- Container (Contact Section) -->
 
@@ -60,7 +46,7 @@
       <br>
       <div style="text-align:center;">
         <div width="50">
-          <button onclick = "addPost()" >Post</button>
+          <button onclick = "addPost()" > <b> Post </b> </button>
         </div>
       </div>
     
@@ -79,6 +65,7 @@
 		   newDiv.id = "newDiv" + postID;
 		   newPost.rows = "6";
 		   newPost.cols = "100";
+		   //newPost.background-color = "#85929E";
 		   document.body.appendChild(newDiv);
 		   document.getElementById(newDiv.id).setAttribute("style","text-align: center");
 		   var postByText = document.createElement("DIV");
@@ -86,7 +73,6 @@
 		   postByText.appendChild(paragraphText);
 		   postByText.position = "relative";
 		   postByText.align = "center";
-		   postByText.left = "-50px";
 		   document.body.appendChild(postByText);
 		}
   </script>
