@@ -1,6 +1,9 @@
 package website;
 
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
@@ -29,4 +32,14 @@ public class MainController {
 		return "redirect:/";
     }
     
+    @RequestMapping("/display")
+    public String homepage(Model model) {
+    		List<Map<String, Object>> comments = jdbcTemplate.queryForList("SELECT * FROM comments");
+    		System.out.println(comments);
+        model.addAttribute("comments",comments);
+    		return "comments_display";
+    }
+    
+    
+    //@RequestMapping("/")
 }
