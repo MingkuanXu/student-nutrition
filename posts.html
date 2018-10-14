@@ -164,13 +164,11 @@
     <!--<script src="js/bootstrap.min.js"></script>-->
 	
 	<!-- Container (Contact Section) -->
-<div id="contact" class="container">
 
-  <div class="row">
     
       <div style="text-align: center;">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" size="98" type="text" required>
+          <input class="form-control" id="postName" name="name" placeholder="Name" size="98" type="text" required>
         </div>
       </div>
 	  
@@ -180,20 +178,28 @@
 	  
       <br>
       <div style="text-align:center;">
-        <div class="col-md-12 form-group">
-          <button onclick="addPost()">Post</button>
+        <div width="50">
+          <button onclick = "addPost()" >Post</button>
         </div>
       </div>
     
-  </div>
+ 
   <br>
   
   <script>
-		function addPost() {
+		var postID = 0;
+		function addPost(postText = "hey", postName = "hi", postDate = "ho") {
+		   var newDiv = document.createElement("DIV");
 		   var newPost = document.createElement("TEXTAREA");
-		   var text = document.createTextNode(document.getElementById("postBox").value);
-		   newPost.appendChild(text);
-		   document.body.appendChild(newPost);
+		   var text = document.createTextNode(postText + "\n\nPosted by " + postName + " at " + postDate);
+		   var post = newPost.appendChild(text);
+		   newDiv.appendChild(newPost);
+		   postID++;
+		   newDiv.id = "newDiv" + postID;
+		   newPost.rows = "10";
+		   newPost.cols = "100";
+		   document.body.appendChild(newDiv);
+		   document.getElementById(newDiv.id).setAttribute("style","text-align: center");
 		}
   </script>
   </body>
