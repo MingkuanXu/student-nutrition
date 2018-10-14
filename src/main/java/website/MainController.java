@@ -33,7 +33,7 @@ public class MainController {
     public String displayPostPage(Model model) throws FileNotFoundException{
     		List<Map<String, String>> comments = CommentsDao.extractFromFile();
     		model.addAttribute("comments",comments);
-    		return "test";
+    		return "posts";
     }
     @PostMapping("/post")
     public String comment(@RequestParam(name="name") String name,
