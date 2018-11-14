@@ -1,1 +1,2 @@
-# student-nutrition
+# Student Nutrition
+Stutrition is a web platform and resource for students learning about healthy eating. Curated resources and activities target student populations to help develop positive health habits in families and students. By changing student health outcomes, Stutrition can also change family health outcomes and generational health outcomes. Our resources and activites are developed specifically with students in mind and are developed to engage families. Together everyone can start the path to a healthier life. 
